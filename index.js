@@ -509,8 +509,8 @@ app.post('/send-bulk-telesign-sms', async (req, res) => {
     }
 });
 
-app.listen(process.env.Port, () => {
-    console.log(`Example app listening on port ${process.env.Port}`);
-    // console.log(process.env.FLW_PUBLIC_KEY);
+const PORT = process.env.PORT || 3000;
 
+app.listen(PORT, () => {
+    console.log(`Example app listening on port ${PORT}`);
 })
